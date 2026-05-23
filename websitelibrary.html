@@ -4,27 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Family Hub - Websites</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <h1>Our Family Hub 🏠</h1>
         <nav>
-            <a href="index.html">Home</a> | 
-            <a href="websitelibrary.html"><b>Websites Directory</b></a> | 
+            <a href="index.html">Home</a>
+            <a href="websitelibrary.html" class="active-tab">Websites Directory</a>
             <a href="diarytab.html">Diary (Coming Soon)</a>
         </nav>
     </header>
 
-    <hr>
-
-    <main>
+    <div class="directory-title-block">
         <h2>🛠️ Website Directory</h2>
         <p>This list is loaded dynamically from our private family Google Sheet database.</p>
+    </div>
 
-        <div id="directory-list">Loading family data stream...</div>
+    <div class="directory-container">
+        
+        <aside class="sidebar-categories">
+            <h3>Categories</h3>
+            <p style="color: #94a3b8; font-size: 0.9em;">Coding</p>
+            <p style="color: #94a3b8; font-size: 0.9em;">Social Media</p>
+        </aside>
 
-        <script src="websitelibrary.js"></script>
+        <main class="cards-display-track" id="directory-list">
+            <div>Loading family data stream...</div>
+        </main>
+
+    </div>
+
+    <script src="websitelibrary.js"></script>
 
 </body>
 </html>
