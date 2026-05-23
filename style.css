@@ -132,36 +132,34 @@ nav a:hover {
    3. RESPONSIVE DESIGN (Mobile & Tablet Adjustments)
    ========================================================================== */
 
-/* This rule applies only to screens that are 768 pixels wide or smaller */
 @media screen and (max-width: 768px) {
     
-    /* 1. Change layout from side-by-side (flex-direction: row) to stacked vertical */
+    /* Force the container to switch directions and drop padding */
     .directory-container {
-        flex-direction: column;
+        flex-direction: column !important; /* Forces the structural rotation */
+        padding: 0 15px 15px 15px !important;
         gap: 20px;
-        padding: 0 15px 15px 15px; /* Reduce padding so it fits phone edges */
     }
 
-    /* 2. Unstick the sidebar and let it take up full width at the top */
+    /* Force the sidebar to drop its fixed desktop width */
     .sidebar-categories {
-        position: static; /* Disables the sticky lock feature on mobile */
-        width: 100%;
+        position: static !important; /* Disables sticky lock */
+        width: 100% !important;     /* Spans edge-to-edge on mobile screen */
         box-sizing: border-box;
     }
 
-    /* 3. Make sure the cards display track takes up full width below the sidebar */
+    /* Force the website card track to match full phone width */
     .cards-display-track {
-        width: 100%;
+        width: 100% !important;
     }
 
-    /* 4. Adjust the main header padding so it doesn't take up too much screen real estate */
     .directory-title-block {
         padding: 15px;
         text-align: center;
     }
     
     nav a {
-        margin: 0 8px; /* Squish nav links slightly closer together so they don't wrap */
+        margin: 0 8px;
         font-size: 0.95em;
     }
 }
